@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Atividades em aula JavaScript</title>
+		<meta name="description" content="Atividades em aula">
+		<meta name="keywords" content="Alimentação">
+		<meta name="robots" content="index, follow">
+		<meta name="author" content="Emerson Silva">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel= "stylesheet" href="css/formulario.css"/>	
+		<script language type="text/javascript" src="javascript/funcoes.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href = "https://fonts.googleapis.com/css?family=Varela+Roundrel" rel = "stylesheet">
+		<link rel="icon" href="img/icon.png">
+		
+	</head>
+	
+<body onload='init()'>
+	<header class="cabecalho container">
+		<a href ="index.html"><h1 class="logo"> Atividades em aula</h1></a>
+			<button class="btn-menu bg-gradiente"> <i class="fa fa-bars fa-lg" aria-hidden="true"></i></button>
+				<nav class="menu">
+					<a class="btn-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+				<ul>
+					<li><a href="#formulario">Faça seu Cadastro</a></li>
+				</ul>				
+	</header>		
+	<br><br>
+		<div class="banner container">
+		
+		
+		
+			<div class="title">
+				<h3><center><b><script language=javascript type="text/javascript">
+								
+				d = new Date();
+				hora= d.getHours();  //variavél hora passa a receber
+							
+				if(hora >= 0 &&  hora <= 12){
+				   document.write("Olá, Bom Dia!");  //Caso o hora seja menor que 5hrs da manhã
+				}
+				else if(hora <= 18){
+				   document.write("Olá, Boa Tarde!");  //Caso o hora seja menor que 18hrs da tarde
+				}
+				else{
+				   document.write("Olá, Boa Noite!");  //Caso o hora seja meior que 18 até 5hrs da manhã
+				}	
+				
+			</script></b>
+			<br><br>
+			<script>
+				// Obtém a data/hora atual
+				var data = new Date();
+
+				// Guarda cada pedaço em uma variável
+				var hora    = data.getHours();      // 0-23
+				var min     = data.getMinutes();    // 0-59
+				var seg     = data.getSeconds();        // 0-59
+
+				// Formata a data e a hora (note o mês + 1)
+				var str_hora = hora + ':' + min /*+ ':' + seg*/;
+
+				// Mostra o resultado
+				document.write (str_hora);
+			</script>
+			<br><br>
+			<b><script language=javascript type="text/javascript">
+			
+				// Obtém a data/hora atual
+				a = new Date
+				
+				var dia = data.getDate();           // 1-31
+				
+				meses = new Array(12);  // variavél meses passa a ser um arraio "Vetor" com 12 posições
+
+				meses[1] = "Janeiro";
+				meses[2] = "Fevereiro";
+				meses[3] = "Março";
+				meses[4] = "Abril";
+				meses[5] = "Maio";
+				meses[6] = "Junho";
+				meses[7] = "Julho";
+				meses[8] = "Agosto";
+				meses[9] = "Setembro";
+				meses[10] = "Outubro";
+				meses[11] = "Novembro";
+				meses[12] = "Dezembro";
+				
+				var dias = new Array(7); // variavél dias passa a ser um arraio "Vetor" com 7 posições
+				
+				dias[1] = "Domingo";
+				dias[2] = "Segunda";
+				dias[3] = "Terça";
+				dias[4] = "Quarta";
+				dias[5] = "Quinta";
+				dias[6] = "Sexta";
+				dias[7] = "Sábado";
+				
+				//executa na tela o resultado obtido ( dia da semana, data da semana, mês e ano )
+				document.write ("Hoje é " + dias[data.getDay()+1] + " , " + dia + " de " + meses[a.getMonth()+ 1] + " de " + a.getFullYear() )
+								
+			</script></b></center></h3>
+				
+	</div>
+		<div class="buttons">
+			<a href="#formulario"><button class="btn btn-cadastro"> Cadastro <i class="fa fa-id-card" aria-hidden="true"></i></button></a>			</div>
+		</div>
+			<main class="servicos container">
+			
+						
+			<!-- ARTIGO PARA FAZER O CADASTRO -->
+			<div id="formulario">
+			<article class="servico_2">
+					<div class="inner_cad">
+						<a>Faça seu Cadastro </a>	
+			<center>
+				<form id="fale-conosco" method="post" action="">
+							<br><br>
+						<h4><legend>Cadastro de Clientes</legend><h4>
+							<br><br>
+				
+						<b> Digite seu CPF: <b>
+						<input type="text" name="tCpf" id="idCPF" size="11" maxlength="11"/></label> &nbsp &nbsp
+							
+						<input type="button" id="verificar" value="VALIDAR" onclick="Validar_cpf(tCpf.value)"/>
+							<br><br>
+							
+						<center><input type="text" id="resultado" name="resultado" size="9" disabled/></center>
+							<br><br>
+							
+				
+						<p><label for="cCNPJ"><b>CNPJ : </b></label><input type="text" name="tCnpj" id="cCnpj" size="20" maxlength="30" placeholder="   CNPJ"
+						onfocus="this.style.backgroundColor='#9ACD32'" onblur="this.style.backgroundColor='#ffffff'" required /><label id="obCnpj"> * </label></p>
+						
+						<p><label for="cIe"><b>IE : </b></label><input type="text" name="tIE" id="cIe" size="20" maxlength="30" placeholder="   IE" 
+						onfocus="this.style.backgroundColor='#9ACD32'" onblur="this.style.backgroundColor='#ffffff'" required /><label id="obIe"> * </label></p>
+					
+						<p><label for="cNome"><b>Nome : </b></label><input type="text" name="tNome" id="cNome" size="40" maxlength="30" placeholder="   Nome Completo" 
+						onfocus="this.style.backgroundColor='#9ACD32'" onblur="this.style.backgroundColor='#ffffff'" required /><label id="obNom"> * </label></p> 
+							<br><br>
+				
+					
+						<legend>Endereço do Usuário</legend>
+						<br>
+						<p><label for="cCep"><b>CEP : </b></label>
+						<input type="text" name="tCep" id="cCep" size="11" maxlength="10" placeholder="   Cep"
+						onfocus="this.style.backgroundColor='#9ACD32'" onblur="this.style.backgroundColor='#ffffff'" required /><label id="obCep"> * </label></p>
+						
+						<p><label for="cRua"><b>Rua :</b></label>
+						<input type="text" name="tRua" id="cRua" size="35" placeholder="   Rua"
+						maxlength="60"
+						onfocus="this.style.backgroundColor='#9ACD32'" onblur="this.style.backgroundColor='#ffffff'" required /><label id="obRua"> * </label></p>
+						
+						<p><label for="cNum"><b>Número : </b></label>
+						<input type="text" name="tNum" id="cNum" size="5" maxlength="4" placeholder="   Número"
+						onfocus="this.style.backgroundColor='#9ACD32'" onblur="this.style.backgroundColor='#ffffff'" required /><label id="obNum"> * </label></p>
+						
+						<p><label for="cBai"><b>Bairro: </b></label>
+						<input type="text" name="tBai" id="cBai" size="20" maxlength="40" placeholder="   Bairro"
+						onfocus="this.style.backgroundColor='#9ACD32'" onblur="this.style.backgroundColor='#ffffff'" required /><label id="obBai"> * </label></p>
+								
+						
+						<p><label for="cCid"><b>Cidade: </b></label>
+						<input type="text" name="tCid" id="cCid" size="20" maxlength="40" placeholder="   Cidade"
+						onfocus="this.style.backgroundColor='#9ACD32'" onblur="this.style.backgroundColor='#ffffff'" required /><label id="obCid"> * </label></p>
+						
+						<p><label for="cCid"><b>Estado: </b></label>
+						<input type="text" name="tEst" id="cEst" size="20" maxlength="40" placeholder="   Estado"
+						onfocus="this.style.backgroundColor='#9ACD32'" onblur="this.style.backgroundColor='#ffffff'" required /><label id="obEst"> * </label></p>
+						
+						<br>
+					
+						<input type="submit" id="cadastro" value="Cadastrar" onclick="valida_form()"/>
+									
+						</form>
+				
+					</center>
+					</div>		
+							
+				</article>
+				</div>	
+			</main>
+		
+
+		<!-- RODAPÉ -->
+		<footer class="rodape container bg-gradiente">
+			<div class="social-icons">
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>	
+				<a href="#"><i class="fa fa-google"></i></a>
+				<a href="#"><i class="fa fa-instagram"></i></a>		
+				<a href="#"><i class="fa fa-envelope"></i></a>	
+			</div>
+				<p class="copyright">
+					Copyright &copy; 2017 - by Emerson Silva Todos os direitos reservados.
+				</p>
+		</footer>
+		<!-- JQUERY -->
+		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<!-- ABRIR E FECHAR O MENU -->
+		<script>
+			$(".btn-menu").click(function(){
+				$(".menu").show(); 
+			});
+			$(".btn-close").click(function(){
+				$(".menu").hide(); 
+			});
+		</script>
+	</body>
+</html>
